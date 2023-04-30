@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <Title>Museums</title>
+
+    <style>
+        div.animation {
+            position: relative;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            0%   {left:0%; top:0px;}
+            25%  {left:45%; top:0px;}
+            50%  {left:90%; top:0px;}
+            75%  {left:45%; top:0px;}
+            100% {left:0%; top:0px;}
+        }
+    </style>
+
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script>
+        var images1 = [
+        ["pic/ww1front.jpg","    National WWI Museum and Memorial front view"],
+        ["pic/ww1inside.jpg","   National WWI Museum and Memorial inside view"],
+        ["pic/ww1skyview.jpg"," National WWI Museum and Memorial skyview"],
+        ];
+        var currentPic1 = 0;
+        
+        var images2 = [
+        ["pic/Nmfront.jpg","      The Nelson-Atkins Museum of Art front view"],
+        ["pic/Nminside.jpg","     The Nelson-Atkins Museum of Art inside view"],
+        ["pic/Nminside1.jpg","    The Nelson-Atkins Museum of Art inside view"],
+        ];
+        var currentPic2 = 0;
+        
+        var images3 = [
+        ["pic/Tmfront.jpg","   The National Museum of Toys and Miniatures front View"],
+        ["pic/Tmpic.jpg","       The National Museum of Toys and Miniatures unique part"],
+        ["pic/Tm2.jpg","       The National Museum of Toys and Miniatures unique part"],
+        ];
+        var currentPic3 = 0;
+
+        function next_pic() {
+            if (currentPic1 < (images1.length-1)) {
+                currentPic1++;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML=images1[currentPic1][1];
+            }
+        }
+        function prev_pic() {
+            if (currentPic1 > 0){
+                currentPic1--;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML = images1[currentPic1][1];
+            }
+        }
+        function next_pic2() {
+            if (currentPic2 < (images2.length-1)) {
+                currentPic2++;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function prev_pic2() {
+            if (currentPic2 > 0){
+                currentPic2--;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function next_pic3() {
+            if (currentPic3 < (images3.length-1)) {
+                currentPic3++;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+        function prev_pic3() {
+            if (currentPic3 > 0){
+                currentPic3--;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+    
+    </script>
+    <link rel="stylesheet" type="text/css" href="ProjectCssfile.css" />
+</head>
+        
+<body>
+  
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a target= "_blank" class="navbar-brand" href="https://www.kcmo.gov/">Kansas City</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Home.html">Home</a></li>
+          <li><a href="Restaurants.html">Restaraunts</a></li>
+          <li class="active"><a href="Museums.html">Museums</a></li>
+          <li><a href="Adventure parks.html"> Adventure parks</a></li>
+          <li><a href="Only in Kansas City.html">Only in Kansas City</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br><br>
+    <div class="animation">
+        <img src="HAK_logo.png" height="150" width="150">
+    </div>
+
+    <center>
+    <h1> National WWI Museum and Memorial </h1> 
+    <p>
+        The National World War I Museum and Memorial was opened in 1926 as the Liberty Memorial. In 2004, it was designated by
+         the United States Congress as the country's official war memorial and museum dedicated to World War I.
+    </p>
+    <p>
+        Address: 2 Memorial Dr, Kansas City, MO 64108 <br>
+        Price Range:<br>
+        Adult  $18.00,<br>
+        Senior (Ages 65+)  $14.00,<br>
+        Youth (Ages 6 to 18)  $10.00,<br>
+        Children (Under 6)  $0.00,<br>
+        Military (Active Duty/Veteran)  $14.00<br>
+        Unique Feature: The only WW1 Museum in USA<br><br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic()" value="Next>">
+    </form>
+            
+    <p align="center">
+        <img id="Image_Holder" src="pic/ww1front.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder" align="center">
+        National WWI Museum and Memorial, Kansas City
+    </p>
+  
+    <br>
+    <br>
+
+    <center>
+    <h1> The Nelson-Atkins Museum of Art </h1> 
+    <p>
+        The Nelson-Atkins Museum of Art is an art museum in Kansas City, Missouri, known for its 
+        encyclopedic collection of art from nearly every continent and culture, and especially for
+         its extensive collection of Asian art.
+    </p>
+    <p>
+        Address: 4525 Oak St, Kansas City, MO 64111<br>
+        Price Range: free<br>
+        Unique Feature: The collection of Asian art and collection of Chinese landscape paintings<br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic2()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic2()" value="Next>">
+    </form>
+      
+    <p align="center">
+        <img id="Image_Holder2" src="pic/Nmfront.jpg" width="700" height="500">
+    </p>
+      
+    <p id="Text_Holder2" align="center">
+        The Nelson-Atkins Museum of Art, Kansas City. 
+    </p>
+
+    <br>
+    <br>
+
+    <center>
+    <h1>The National Museum of Toys and Miniatures </h1>
+    <p>
+        Kansas City-style barbecue refers to the specific regional barbecue style of slowly smoked meat originating from Kansas City
+         in the early 20th century. Henry Perry is credited as the originator of the style.
+    </p>
+    <p>
+        Address:5235 Oak St, Kansas City, MO 64112<br>
+        Price Range:<br>
+        Adult (Ages 18-64) $8<br>
+        Age 65+: $7<br>
+        Ages 6-17, Students: $5<br>
+        Age 5 and Under: Free<br>
+        Museums for All (With EBT Card): Free<br>
+        UMKC Faculty, Staff, and Students:Free<br>
+        Active Duty, Retired Military:Free<br>
+        Unique Feature: World's largest collection of fine-scale miniatures<br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic3()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic3()" value="Next>">
+    </form>
+        
+    <p align="center">
+        <img id="Image_Holder3" src="pic/Tmfront.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder3" align="center">
+        The National Museum of Toys and Miniatures, Kansas City
+    </p>
+    <br><br>
+    <br><br>
+    <center>
+    <h4> Please feel free to leave us a feedback\comment</h4> <br>
+   
+    <form  style="vertical-align: top;"  action="Comment.php" method="post" enctype="multipart/form-data">
+        
+        <label> Name: </label> &nbsp; <input type="text" name="name"><br>
+        <label> Email: </label>&nbsp;   <input type="text" name="email"><br>
+        <label> Comment: </label>&nbsp; <textarea placeholder  =" Type something here...Why you like our website and what needs to be done to improve it." 
+        type="text" id="textboxid" name="comment"></textarea><br>
+        <input type="submit" name="btn_upload" value="Submit"> <br>
+   
+    </form>
+
+    </center>
+    <bar>
+    <bar>
+    	<footer>
+            &nbsp;<a href="mailto:kmf5x7@umsystem.edu">Kevin Floyd</a><br>   
+            &nbsp;<a href="mailto:anfnnw@umkc.edu">Andrew Floyd</a><br>
+            &nbsp;<a href="mailto:hsgf5@umsystem.edu">Hussein Sakkoky</a><br>
+            <p>&nbsp;Copyright &copy; HAK Studios, 2022</p>
+            </footer>
+</body>
+</html>
+
+
+

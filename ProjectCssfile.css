@@ -1,0 +1,37 @@
+body{
+  
+  margin:0;
+  padding:0;
+  background: linear-gradient(#dddd7bbf,#69b8d2);
+}
+
+h1{
+    color:rgb(42, 148, 46);
+    text-align:center;
+    font-family:Fantasy;
+}
+h4{
+    color: rgb(203, 90, 19);
+    font-size: 20px;
+    font-family: Georgia ;
+}
+p{
+    color: rgb(19, 20, 22);
+    font-size: 18px;
+    font-family: Georgia ;
+}
+
+#textboxid
+{
+    height:125px;
+    width: 400px;
+    font-size:14pt;
+}
+label {
+  display: inline-block;
+  width:100px;
+  text-align: right;
+  vertical-align: top;
+  
+}
+

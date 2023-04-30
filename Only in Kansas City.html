@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <Title>Only in Kansas City</title>
+
+    <style>
+        div.animation {
+            position: relative;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            0%   {left:0%; top:0px;}
+            25%  {left:45%; top:0px;}
+            50%  {left:90%; top:0px;}
+            75%  {left:45%; top:0px;}
+            100% {left:0%; top:0px;}
+        }
+    </style>
+
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script>
+        var images1 = [
+        ["pic/Ahfront.jpg","     Arrowhead Stadium front view"],
+        ["pic/Ahinside.jpg","    Arrowhead Stadium inside view"],
+        ["pic/Ahskyview.jpg","   Arrowhead Stadium skyview"],
+        ["pic/Ahpm.jpg","        Chiefs quarterback Patrick Mahomes"],
+        ["pic/Ahteam.jpg","      Chiefs team"],
+        ];
+        var currentPic1 = 0;
+        
+        var images2 = [
+        ["pic/Rmfront.jpg","      River Market front view"],
+        ["pic/Rminside.jpg","     River Market inside view"],
+        ["pic/Rminside1.jpg","    River Marketinside view"],
+        ["pic/Rmvendor.jpg","     River Market Vendor view"],
+        ];
+        var currentPic2 = 0;
+        
+        var images3 = [
+        ["pic/Tfront.jpg","    Kansas City Streetcar front View"],
+        ["pic/Tinside.jpg","   Kansas City Streetcar inside view"],
+        ["pic/T1.jpg","        Kansas City Streetcar view"],
+        ["pic/T2.jpg","        Kansas City Streetcar view"],
+        ["pic/T3.jpg","        Kansas City Streetcar view"],
+        ];
+        var currentPic3 = 0;
+
+        function next_pic() {
+            if (currentPic1 < (images1.length-1)) {
+                currentPic1++;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML=images1[currentPic1][1];
+            }
+        }
+        function prev_pic() {
+            if (currentPic1 > 0){
+                currentPic1--;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML = images1[currentPic1][1];
+            }
+        }
+        function next_pic2() {
+            if (currentPic2 < (images2.length-1)) {
+                currentPic2++;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function prev_pic2() {
+            if (currentPic2 > 0){
+                currentPic2--;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function next_pic3() {
+            if (currentPic3 < (images3.length-1)) {
+                currentPic3++;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+        function prev_pic3() {
+            if (currentPic3 > 0){
+                currentPic3--;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="ProjectCssfile.css" />
+</head>
+        
+<body>
+
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a target= "_blank" class="navbar-brand" href="https://www.kcmo.gov/">Kansas City</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Home.html">Home</a></li>
+          <li><a href="Restaurants.html">Restaraunts</a></li>
+          <li><a href="Museums.html">Museums</a></li>
+          <li><a href="Adventure parks.html"> Adventure parks</a></li>
+          <li class="active"><a  href="Only in Kansas City.html">Only in Kansas City</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br><br>
+    <div class="animation">
+        <img src="HAK_logo.png" height="150" width="150">
+    </div>
+    
+    <center>
+    <h1> Arrowhead Stadium </h1> 
+    </center>
+    <center>
+    <p>
+        GEHA Field at Arrowhead Stadium is an American football stadium in Kansas City, Missouri, 
+        United States. It primarily serves as the home venue of the Kansas City Chiefs of the National Football League. 
+    </p>
+    </center>
+    <center>
+    <p>
+        Address:  1 Arrowhead Dr, Kansas City, MO 64129 <br>
+        Price Range: From $98 to $1000<br>
+        Unique Feature: Arrowhead Stadium has a seating capacity of 76,416, making it the 27th-largest
+         stadium in the United States and the sixth-largest NFL stadium.<br><br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic()" value="Next>">
+    </form>
+            
+    <p align="center">
+        <img id="Image_Holder" src="pic/Ahfront.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder" align="center">
+        Arrowhead Stadium, Kansas City
+    </p>
+  
+    <br>
+    <br>
+
+    <center>
+    <h1> The River Market </h1> 
+    </center>
+    <center>
+    <p>
+        Busy River Market centers on City Market, dating to 1857, where casual global eateries, 
+        gourmet grocery stores and indie boutiques surround pavilions hosting a weekend farmers, 
+        market. Nearby, the Arabia Steamboat Museum displays paraphernalia salvaged from a ship 
+        that sunk in the Missouri River in the mid-19th century. Broad paths for strolling and biking 
+        trace the shoreline in Berkley Riverfront Park.
+    </p>
+    </center>
+    <center>
+    <p>
+        Address: 5th & Walnut Kansas City, MO 64106<br>
+        Price Range: free<br>
+        Unique Feature: The River Market is a vibrant and exciting neighborhood with residential lofts,
+         restaurants, bars, shops, cafes, and ethnic markets, where dining, entertainment and shopping<br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic2()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic2()" value="Next>">
+    </form>
+      
+    <p align="center">
+        <img id="Image_Holder2" src="pic/Rmfront.jpg" width="700" height="500">
+    </p>
+      
+    <p id="Text_Holder2" align="center">
+        The Nelson-Atkins Museum of Art, Kansas City. 
+    </p>
+
+    <br>
+    <br>
+
+    <center>
+    <h1>Kansas City Streetcar</h1>
+    </center>
+    <center>
+    <p>
+        The KC Streetcar is a streetcar system in Downtown Kansas City, Missouri. Construction began 
+        in May 2014. The system opened for service on May 6, 2016. The KC Streetcar is free to ride, 
+        as it is funded by a transportation development district.
+    </p>
+    </center>
+    <center>
+    <p>
+        Address:All around KC<br>
+        Price Range:Free <br>
+        Unique Feature: The Kansas City Streetcar is free to ride, which means there is no fare 
+        to ride on the streetcar as it travels the 2 miles through the heart of downtown.s<br>
+    </center>
+    </p>
+    
+    <form align="center">
+        <input type="button" onclick="prev_pic3()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic3()" value="Next>">
+    </form>
+        
+    <p align="center">
+        <img id="Image_Holder3" src="pic/Tfront.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder3" align="center">
+        The KC Streetcar, Kansas City
+    </p>
+    <br><br>
+    <br><br>
+    <center>
+    <h4> Please feel free to leave us a feedback\comment</h4> <br>
+   
+    <form  style="vertical-align: top;"  action="Comment.php" method="post" enctype="multipart/form-data">
+        
+        <label> Name: </label> &nbsp; <input type="text" name="name"><br>
+        <label> Email: </label>&nbsp;   <input type="text" name="email"><br>
+        <label> Comment: </label>&nbsp; <textarea placeholder  =" Type something here...Why you like our website and what needs to be done to improve it." 
+        type="text" id="textboxid" name="comment"></textarea><br>
+        <input type="submit" name="btn_upload" value="Submit"> <br>
+   
+    </form>
+
+    </center>
+
+    <footer>
+    	<footer>
+            &nbsp;<a href="mailto:kmf5x7@umsystem.edu">Kevin Floyd</a><br>   
+            &nbsp;<a href="mailto:anfnnw@umkc.edu">Andrew Floyd</a><br>
+            &nbsp;<a href="mailto:hsgf5@umsystem.edu">Hussein Sakkoky</a><br>
+            <p>&nbsp;Copyright &copy; HAK Studios, 2022</p>
+            </footer>
+
+</body>
+</html>
+
+
+

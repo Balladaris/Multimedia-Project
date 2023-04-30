@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <Title>Museums</title>
+
+    <style>
+        div.animation {
+            position: relative;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            0%   {left:0%; top:0px;}
+            25%  {left:45%; top:0px;}
+            50%  {left:90%; top:0px;}
+            75%  {left:45%; top:0px;}
+            100% {left:0%; top:0px;}
+        }
+    </style>
+
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script>
+        var images1 = [
+        ["pic/woffront.jpg","    Worlds of Fun  front view"],
+        ["pic/wofinside.jpg","   Worlds of Fun  inside view"],
+        ["pic/wofinside1.jpg","  Worlds of Fun  inside view"],
+        ];
+        var currentPic1 = 0;
+        
+        var images2 = [
+        ["pic/go.jpg","      Go Ape Zipline and Adventure Park view"],
+        ["pic/go1.jpg","     Go Ape Zipline and Adventure Park view"],
+        ["pic/go2.jpg","     Go Ape Zipline and Adventure Park view"],
+        ];
+        var currentPic2 = 0;
+        
+        var images3 = [
+        ["pic/ll.jpg","    LEGOLAND Discovery Center Kansas City View"],
+        ["pic/ll1.jpg","      LEGOLAND Discovery Center Kansas City View"],
+        ["pic/ll2.jpg","        LEGOLAND Discovery Center Kansas City View"],
+        ];
+        var currentPic3 = 0;
+
+        function next_pic() {
+            if (currentPic1 < (images1.length-1)) {
+                currentPic1++;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML=images1[currentPic1][1];
+            }
+        }
+        function prev_pic() {
+            if (currentPic1 > 0){
+                currentPic1--;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML = images1[currentPic1][1];
+            }
+        }
+        function next_pic2() {
+            if (currentPic2 < (images2.length-1)) {
+                currentPic2++;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function prev_pic2() {
+            if (currentPic2 > 0){
+                currentPic2--;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function next_pic3() {
+            if (currentPic3 < (images3.length-1)) {
+                currentPic3++;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+        function prev_pic3() {
+            if (currentPic3 > 0){
+                currentPic3--;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+    
+    </script>
+    <link rel="stylesheet" type="text/css" href="ProjectCssfile.css" />
+</head>
+        
+<body>
+  
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a target= "_blank" class="navbar-brand" href="https://www.kcmo.gov/">Kansas City</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Home.html">Home</a></li>
+          <li><a href="Restaurants.html">Restaraunts</a></li>
+          <li><a href="Museums.html">Museums</a></li>
+          <li class="active"><a href="Adventure parks.html"> Adventure parks</a></li>
+          <li><a href="Only in Kansas City.html">Only in Kansas City</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br><br>
+    <div class="animation">
+        <img src="HAK_logo.png" height="150" width="150">
+    </div>
+
+    <center>
+    <h1> Worlds of Fun </h1> 
+    <p>
+        Worlds of Fun is a more than 235-acre entertainment complex located in Kansas City, Missouri, featuring the largest amusement park 
+        and water park in the Midwest. Founded by American businessmen Lamar Hunt and Jack Steadman, the park opened in 1973 under the ownership 
+        of Hunt's company, Mid-America Enterprises. 
+    </p>
+    <p>
+        Address: 4545 Worlds of Fun Ave, Kansas City, MO 64161 <br>
+        Price Range:<br>
+        Daily Tickets  $34.99,<br>
+        Season Pass $99-$230,
+        Military  $34.00,<br>
+        Unique Feature: Unlimited visits, Free parking, Stay on property in a cabin or RV site at the Worlds of Fun Village .<br><br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic()" value="Next>">
+    </form>
+            
+    <p align="center">
+        <img id="Image_Holder" src="pic/woffront.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder" align="center">
+        Worlds of Fun, Kansas City
+    </p>
+  
+    <br>
+    <br>
+
+    <center>
+    <h1> Go Ape Zipline and Adventure Park </h1> 
+    <p>
+        Adventure-activity chain venue where groups explore the forest canopy via a treetop rope course.
+    </p>
+    <p>
+        Address:  7331 Oakwood Dr, Kansas City, MO 64132<br>
+        Price Range: 
+        Adults Ages 18 and older ($59.95)
+        Young Adults Ages 16 to 17 ($59.95)
+        Youths 10-15 yrs. Every 2 must be accompanied by 1 adult 18+. ($54.95) <br>
+
+        Unique Feature: The outdoor adventure experience includes having guests climb a rope ladder, stairs or a fisherman's trap to access the course. <br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic2()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic2()" value="Next>">
+    </form>
+      
+    <p align="center">
+        <img id="Image_Holder2" src="pic/go.jpg" width="700" height="500">
+    </p>
+      
+    <p id="Text_Holder2" align="center">
+        Go Ape Zipline and Adventure Park, Kansas City. 
+    </p>
+
+    <br>
+    <br>
+
+    <center>
+    <h1> LEGOLAND Discovery Center Kansas City </h1>
+    <p>
+        Legoland Discovery Center Kansas City is an indoor family entertainment center located in the Crown Center in Kansas City,
+         Missouri. The attraction includes Lego rides, a soft play area, a 4D cinema and a gift shop.
+    </p>
+    <p>
+        Address: 2475 Grand Blvd, Kansas City, MO 64108<br>
+        Price Range: $19.99 - 44.99<br>
+        Unique Feature: Based on the ever popular LEGO brick, the LDC including a 4D cinema, master classes from the LEGO Master Model Builder; 
+        an exciting LEGO laser ride; special party rooms for birthdays and other celebrations<br>
+    </p>
+    </center>
+    <form align="center">
+        <input type="button" onclick="prev_pic3()" value="<Prev">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="next_pic3()" value="Next>">
+    </form>
+        
+    <p align="center">
+        <img id="Image_Holder3" src="pic/ll.jpg" width="700" height="500">
+    </p>
+        
+    <p id="Text_Holder3" align="center">
+        LEGOLAND Discovery Center Kansas City, Kansas City
+    </p>
+    <br><br>
+    <br><br>
+    <center>
+    <h4> Please feel free to leave us a feedback\comment</h4> <br>
+   
+    <form  style="vertical-align: top;"  action="Comment.php" method="post" enctype="multipart/form-data">
+        
+        <label> Name: </label> &nbsp; <input type="text" name="name"><br>
+        <label> Email: </label>&nbsp;   <input type="text" name="email"><br>
+        <label> Comment: </label>&nbsp; <textarea placeholder  =" Type something here...Why you like our website and what needs to be done to improve it." 
+        type="text" id="textboxid" name="comment"></textarea><br>
+        <input type="submit" name="btn_upload" value="Submit"> <br>
+   
+    </form>
+
+    </center>
+    <bar>
+    <bar>
+    	<footer>
+            &nbsp;<a href="mailto:kmf5x7@umsystem.edu">Kevin Floyd</a><br>   
+            &nbsp;<a href="mailto:anfnnw@umkc.edu">Andrew Floyd</a><br>
+            &nbsp;<a href="mailto:hsgf5@umsystem.edu">Hussein Sakkoky</a><br>
+            <p>&nbsp;Copyright &copy; HAK Studios, 2022</p>
+            </footer>
+</body>
+</html>
+
+
+

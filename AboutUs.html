@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <Title>Museums</title>
+
+    <style>
+        div.animation {
+            position: relative;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            0%   {left:0%; top:0px;}
+            25%  {left:45%; top:0px;}
+            50%  {left:90%; top:0px;}
+            75%  {left:45%; top:0px;}
+            100% {left:0%; top:0px;}
+        }
+    </style>
+
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script>
+        var images1 = [
+        ["pic/Husseinp.jpg","    "],
+        ];
+        var currentPic1 = 0;
+        
+        var images2 = [
+        ["pic/Hussein.jpg","   "],
+        ];
+        var currentPic2 = 0;
+        
+        var images3 = [
+        ["pic/Hussein.jpg","    "],
+        ];
+        var currentPic3 = 0;
+
+        function next_pic() {
+            if (currentPic1 < (images1.length-1)) {
+                currentPic1++;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML=images1[currentPic1][1];
+            }
+        }
+        function prev_pic() {
+            if (currentPic1 > 0){
+                currentPic1--;
+                document.getElementById("Image_Holder").src=images1[currentPic1][0];
+                document.getElementById("Text_Holder").innerHTML = images1[currentPic1][1];
+            }
+        }
+        function next_pic2() {
+            if (currentPic2 < (images2.length-1)) {
+                currentPic2++;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function prev_pic2() {
+            if (currentPic2 > 0){
+                currentPic2--;
+                document.getElementById("Image_Holder2").src=images2[currentPic2][0];
+                document.getElementById("Text_Holder2").innerHTML = images2[currentPic2][1];
+            }
+        }
+        function next_pic3() {
+            if (currentPic3 < (images3.length-1)) {
+                currentPic3++;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+        function prev_pic3() {
+            if (currentPic3 > 0){
+                currentPic3--;
+                document.getElementById("Image_Holder3").src=images3[currentPic3][0];
+                document.getElementById("Text_Holder3").innerHTML = images3[currentPic3][1];
+            }
+        }
+    
+    </script>
+    <link rel="stylesheet" type="text/css" href="ProjectCssfile.css" />
+</head>
+        
+<body>
+  
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a target= "_blank" class="navbar-brand" href="https://www.kcmo.gov/">Kansas City</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Restaurants.html">Restaraunts</a></li>
+          <li><a href="Museums.html">Museums</a></li>
+          <li><a href="Adventure parks.html"> Adventure parks</a></li>
+          <li><a href="Only in Kansas City.html">Only in Kansas City</a></li>
+          <li class="active"></liclass><a href="AboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br><br>
+    <div class="animation">
+        <img src="HAK_logo.png" height="150" width="150">
+    </div>
+
+    <center>
+    <h1> Hussein Sakkoky</h1> 
+    <p>
+        
+   
+      
+    </p>
+    </center>
+    <form align="center">
+      
+    </form>
+            
+    <p align="center">
+        <img id="Image_Holder" src="pic/Husseinp.jpg" width="500" height="500"></p>
+        
+    <p id="Text_Holder" align="center"></p>
+    <center>
+        <p>
+           My name is Hussein Sakkoky. I burn and raised in Iraq. Moved to what I call home now United Stats seven years ago. I worked with USArmy as an Interpreter.
+            Currently studying at UMKC seeking computer science degree and minor in Bussniess Admenstration. Since I moved in Kansas City, I felt in love with the city
+             even though I traveled a lot to many other states, cities, I just didn't felt as home as Kansas city. 
+       </p>
+       </center>
+
+    <br>
+    <br>
+
+    <center>
+    <h1> Andrew Floyd </h1> 
+    </center>
+    <form align="center"></form>
+      
+    <p align="center">
+        <img id="Image_Holder2" src="pic/Andrew.jpg" width="500" height="500">
+    </p>
+      
+    <p id="Text_Holder2" align="center"></p>
+    <center>
+    <p>
+        I'm Andrew. I enjoy going to the gym, having jam sessions, and playing WoW. I also love traveling, and learning new things. 
+        That's why this creation is so great. Kansas City is a lively place full of unique experiences. I hope that the content of our
+         site helps you in making a decision for places to explore in your time in the city.
+    </p>
+    </center>
+    <br>
+    <br>
+
+    <center>
+    <h1> Kevin Floyd </h1>
+   
+    </center>
+    <form align="center">
+     
+    </form>
+        
+    <p align="center">
+        <img id="Image_Holder3" src="pic/Kevin.jpg" width="500" height="500">
+    </p>
+    <center>
+    <p> My name is Kevin Floyd. I am born and raised in Kansas City, MO. I think KC is a wonderful
+         place and am very happy to be able to build this website so that we can give some ideas of places 
+         that people should visit if coming to KC for the first time or unfamiliar with the city.</p>  
+    </center>  
+    <p id="Text_Holder3" align="center">
+    
+    </p>
+    <br><br>
+    <br><br>
+    <center>
+    <h4> Please feel free to leave us a feedback\comment</h4> <br>
+   
+    <form  style="vertical-align: top;"  action="Comment.php" method="post" enctype="multipart/form-data">
+        
+        <label> Name: </label> &nbsp; <input type="text" name="name"><br>
+        <label> Email: </label>&nbsp;   <input type="text" name="email"><br>
+        <label> Comment: </label>&nbsp; <textarea placeholder  =" Type something here...Why you like our website and what needs to be done to improve it." 
+        type="text" id="textboxid" name="comment"></textarea><br>
+        <input type="submit" name="btn_upload" value="Submit"> <br>
+   
+    </form>
+    
+    </center>
+    <bar>
+    <bar>
+        <footer>
+            &nbsp;<a href="mailto:kmf5x7@umsystem.edu">Kevin Floyd</a><br>   
+            &nbsp;<a href="mailto:anfnnw@umkc.edu">Andrew Floyd</a><br>
+            &nbsp;<a href="mailto:hsgf5@umsystem.edu">Hussein Sakkoky</a><br>
+            <p>&nbsp;Copyright &copy; HAK Studios, 2022</p>
+            </footer>
+
+</body>
+</html>
+
